@@ -1,0 +1,640 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grounded Coffee</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body id="scroll-lock">
+
+    <!-- ========== Start Cart Modal Pop up Section ========== -->
+    <div id="cartModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cartItems" class="list-group"></ul>
+                    <p class="mt-3 fw-bold">Total: $<span id="cartTotal">0</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" id="checkout">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== End Modal Pop up Section ========== -->
+    
+
+    <!-- ========== Start Navigation Bar Section ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand" href="index.html">Bean Boutique</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                              Products
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="coffee_beans.html">Coffee Beans</a></li>
+                              <li><a class="dropdown-item" href="coffee.html">Grounded Coffee</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipment.html">Equipments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="event.html">Events & Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="progress-bar"></div>
+    </nav>
+    <!-- ========== End Navigation Bar Section ========== -->
+
+
+    <!-- ========== Start Coffee Card Section ========== -->
+    <section>
+        <div class="container-fluid product-container my-5">
+            <div class="head-card" data-aos="slide-up">
+                <h3 class="card-heading p-3">Get the finest coffee here</h3>
+                <p>Roasted Grounded Coffee</p>
+            </div>
+            <div class="coffee-catagory">
+                <ul class="catagory-list order-2 order-md-1">
+                    <li class="catagory-item">
+                        <a href="coffee_beans.html" class="catagory-links">Roasted Coffee</a>
+                    </li>
+                    <li class="catagory-item">
+                        <a href="coffee.html" class="catagory-links active-link">Grounded Coffee</a>
+                    </li>
+                </ul>
+                <input type="text" id="searchBox" placeholder="Search Coffee" class="order-1 order-md-2">
+            </div>
+            <div class="row g-0 gx-md-4 gy-md-4 card-row">
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-bag-02.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Boutique French Roast</h3>
+                            <p class="card-text">Hand-roasted in French</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-bag-02.jpg" data-title="Boutique French Roast" data-desc=" Deep, bold, and sophisticated. This meticulously hand-roasted blend delivers a rich and smoky profile with hints of dark chocolate and toasted nuts, perfect for those who love an intense and refined coffee experience." data-price="15">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-bag-01.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Sicko Bulletproof</h3>
+                            <p class="card-text">Light French Kick</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-bag-01.jpg" data-title="Sicko Bulletproof" data-desc="A daring blend with a light French roast twist, delivering a smooth yet energizing kick. Infused with buttery undertones and a nutty essence, this coffee is designed to fuel your day with unstoppable energy and bold character." data-price="25">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/Capsule-Gold-2.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Aurora Bliss</h3>
+                            <p class="card-text">Golden Roast</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/Capsule-Gold-2.jpg" data-title="Aurora Bliss" data-desc="A bright and aromatic blend designed for a smooth and mellow cup. Delicate floral hints and a touch of vanilla make this capsule the perfect companion for a refreshing and uplifting morning coffee." data-amount="10 capsules included" data-price="20">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-04.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Misora Cappuccino</h3>
+                            <p class="card-text">Blend Arabica / Robusta</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-bag-02.jpg" data-title="Misora Cappuccino" data-desc="A harmonious fusion of Arabica and Robusta, expertly blended to create a smooth and creamy cappuccino experience. Expect a perfect balance of mild acidity, rich body, and a velvety finish in every sip." data-price="25">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-md-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-bag-01.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Signature Sunrise</h3>
+                            <p class="card-text">Arabica Medium Roasted</p>
+
+                            <!-- Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-bag-01.jpg" data-title="Signature Sunrise" data-desc="A smooth and balanced medium roast crafted from 100% Arabica beans. With delicate notes of caramel and citrus, this blend offers a bright and refreshing start to your day." data-price="10">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-md-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-bag-03.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Beach Sunset</h3>
+                            <p class="card-text">Arabica Dark Roasted</p>
+
+                            <!-- Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-bag-03.jpg" data-title="Beach Sunset" data-desc="Bold and indulgent, this 100% Arabica dark roast captures the essence of a perfect evening by the shore. With deep chocolatey notes, a smoky undertone, and a lingering caramel finish, it&apos;s a luxurious escape in every cup." data-price="10">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/coffee-04.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Leonardo Latte</h3>
+                            <p class="card-text">Roasted in Greece</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/coffee-04.jpg" data-title="Leonardo Latte" data-desc="A Mediterranean masterpiece, this smooth and aromatic roast brings a velvety texture with hints of honey and toasted almonds. Perfectly balanced for a creamy latte, it delivers a rich yet mellow coffee experience." data-price="20">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="col-6 col-sm-6 col-lg-3 cards">
+                    <div class="card h-100">
+                        <img src="./coffee-bags/Capsule-Teal-2.jpg" class="" alt="Card Image">
+                        <div class="card-body">
+                            <h3 class="card-title">Midnight Velvet</h3>
+                            <p class="card-text">Intense Espresso</p>
+
+                            <!-- Can Edit Title, Desc and Price in data -->
+                            <button class="card-button view-details" data-image="./coffee-bags/Capsule-Teal-2.jpg" data-title="Midnight Velvet" data-desc="A bold and luxurious espresso capsule with a deep, velvety crema. Rich cocoa notes blend with a hint of toasted hazelnut, creating a smooth yet intense coffee experience perfect for late-night indulgence." data-amount="10 capsules included" data-price="20">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ========== End Coffee Card Section ========== -->
+
+
+    <!-- ========== Start Bottom Push Up Section ========== -->
+    <div class="slide-up-container container-fluid" id="detailsContainer">
+        <div class="container-fluid detail-container">
+            <div class="detail-card row">
+                <div class="col-md-5 image-container">
+                    <img id="detailImage" src="" alt="" class="image-fluid">
+                </div>
+                <div class="col-md-7 detail-box">
+                    <div class="detail-title">
+                        <h5 id="detailTitle"></h5>
+                        <h6>100g</h6>
+                    </div>
+                    <h6 id="detailAmount"></h6>
+                    <p id="detailDesc"></p>
+                    <div class="input-group">
+                        <button class="btn btn-primary decrease-qty" type="button">&#45;</button>
+                        <input type="number" id="quantity" value="1" class="form-control text-center">
+                        <button class="btn btn-primary increase-qty" type="button">+</button>
+                    </div>
+                    <h5 class="unit-price">Unit Price - $<span id="detailPrice"></span></h5>
+                    <div class="button-group">
+                        <button class="add-to-cart order-2 order-md-1" id="addToCart">Add to Cart</button>
+                        <button class="btn btn-danger close-btn order-1 order-md-2" id="close-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary cart-button" id="cartButton">
+        View Cart (<span id="cartCount">0</span>)
+    </button>
+    <!-- ========== End Bottom Push Up Section ========== -->
+
+
+    <!-- ========== Start Event Section ========== -->
+    <section>
+        <div class="container-fluid">
+            <!-- Desktop View: 3 Columns -->
+            <div class="row desktop-columns">
+              <div class="col-md-4 event-cards">
+                <div class="event-cards-inside">
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <h5 class="card-title" data-aos="slide-right">Buy a packet</h5>
+                    <p class="event-text" data-aos="slide-right">Get the best coffee within your area! <br>Your reliable retail is on sale for the customers</p>
+                    <a href="coffee.html" class="event-button" data-aos="slide-down">
+                        Get Now
+                    </a>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                </div>
+              </div>
+              <div class="col-md-4 event-cards">
+                <div class="event-cards-inside">
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <h5 class="card-title" data-aos="slide-right">Want to know us more?</h5>
+                    <p class="event-text" data-aos="slide-right">Unfold the History of your favourite relaxing corner of the town</p>
+                    <a href="about.html#story" class="event-button" data-aos="slide-down">
+                        Learn More
+                    </a>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                </div>
+              </div>
+              <div class="col-md-4 event-cards">
+                <div class="event-cards-inside">
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <h5 class="card-title" data-aos="slide-right">Learn the Magic</h5>
+                    <p class="event-text" data-aos="slide-right">Meet up with Master Barista and feel the art of making high class beverage</p>
+                    <a href="event.html" class="event-button" data-aos="slide-down">
+                        Join Event
+                    </a>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                    <span class="blank-space"></span>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Mobile View: Carousel -->
+            <div id="mobileCarousel" class="carousel slide mobile-carousel" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-card">
+                      <div class="carousel-cards-inside">
+                          <h3 class="carousel-card-title">But a packet</h3>
+                          <p class="carousel-card-text">Get the best coffee within your area! <br>Your reliable retail is on sale for the customers</p>
+                          <a href="coffee.html" class="carousel-card-button">
+                              Get Now
+                          </a>
+                      </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-card">
+                    <div class="carousel-cards-inside">
+                        <h3 class="carousel-card-title">Want to know us more?</h3>
+                        <p class="carousel-card-text">Unfold the History of your favourite relaxing corner of the town</p>
+                        <a href="about.html#story" class="carousel-card-button">
+                            Learn More
+                        </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-card">
+                      <div class="carousel-cards-inside">
+                            <h3 class="carousel-card-title">Learn the Magic</h3>
+                            <p class="carousel-card-text">Meet up with Master Barista and feel the art of making high class beverage</p>
+                            <a href="event.html" class="carousel-card-button">
+                                Learn More
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- buttons -->
+              <!-- <button class="carousel-control-prev" type="button" data-bs-target="#mobileCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#mobileCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button> -->
+            </div>
+          </div>
+    </section>
+    <!-- ========== End Event Section ========== -->
+
+
+    <!-- ========== Start Footer Section ========== -->
+    <footer class="footer" id="footer">
+        <div class="container-fluid footer-container">
+            <!-- Desktop Layout -->
+            <div class="row d-none d-md-flex footer-row">
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Our Products</h3>
+                    <ul class="list-unstyled footer-sub" data-aos="fade-down ease-in">
+                        <li class="footer-link"><a href="coffee_beans.html">Coffee Beans</a></li>
+                        <li class="footer-link"><a href="coffee.html">Grounded Coffee</a></li>
+                        <li class="footer-link"><a href="equipment.html">Equipments</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Latest Updates</h3>
+                    <ul class="list-unstyled footer-sub" data-aos="fade-down ease-in">
+                        <li class="footer-link"><a href="event.html">Events</a></li>
+                        <li class="footer-link"><a href="event.html">Blogs</a></li>
+                        <li class="footer-link"><a href="about.html#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Follow Us</h3>
+                    <ul class="list-unstyled d-flex footer-link-icon" data-aos="fade-down ease-in">
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="accordion d-md-none" id="footerAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Our Products
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion"><a href="coffee_beans.html">Coffee Beans</a></li>
+                                <li class="footer-accordion"><a href="coffee.html">Grounded Coffee</a></li>
+                                <li class="footer-accordion"><a href="equipment.html">Equipments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Latest Updates
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion"><a href="event.html">Events</a></li>
+                                <li class="footer-accordion"><a href="event.html">Blogs</a></li>
+                                <li class="footer-accordion"><a href="about.html#location">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Follow Us
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>facebook.com/beanboutique</span>
+                                    </a>
+                                </li>
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-instagram"></i>
+                                        <span>instragram.com/beanboutique</span>
+                                    </a>
+                                </li>
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-telegram"></i>
+                                        <span>t.me/beanboutique</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid footer-wrap">
+            <div class="row footer-wrap-row">
+                <div class="col-md-4 footer-wrap-item">
+                    <span class="footer-wrap-text">@ 2025 Bean Boutique</span>
+                </div>
+                <div class="col-md-4 footer-wrap-item">
+                    <h4 class="footer-wrap-head">
+                        Bean Boutique
+                    </h4>
+                </div>
+                <div class="col-md-4 footer-wrap-item">
+                    <span class="footer-wrap-text">In Coffee We Trust</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== End Footer Section ========== -->
+
+
+
+
+
+    <!-- ========== JavaScript Section ========== -->
+
+    <!-- Functionality Scripts -->
+    <script>
+
+        // Search Item
+        document.getElementById('searchBox').addEventListener('input', function() {
+            let searchValue = this.value.toLowerCase(); // Get search input and convert to lowercase
+            let cards = document.querySelectorAll('.cards'); // Select all cards
+
+            cards.forEach(card => {
+                let titleElement = card.querySelector('.card-title'); // Get card title element
+                let title = titleElement.textContent.toLowerCase();
+
+                if (title.includes(searchValue)) {
+                    card.style.display = "block"; // Show matching cards
+                } else {
+                    card.style.display = "none"; // Hide non-matching cards
+                }
+            });
+        });
+
+        // Card Details
+        document.querySelectorAll('.view-details').forEach(button => {
+            button.addEventListener('click', function() {
+                document.getElementById('detailImage').src = this.getAttribute('data-image');
+                document.getElementById('detailTitle').textContent = this.getAttribute('data-title');
+                document.getElementById('detailDesc').textContent = this.getAttribute('data-desc');
+                document.getElementById('detailPrice').textContent = this.getAttribute('data-price');
+                document.getElementById('detailAmount').textContent = this.getAttribute('data-amount');
+                document.getElementById('detailsContainer').classList.add('active');
+                document.getElementById('overlay').style.display = 'block'; // Show overlay
+                document.getElementById('scroll-lock').style.overflow = 'hidden';
+            });
+        });
+
+        // Close Function
+        function closing(){
+            document.getElementById('detailsContainer').classList.remove('active');
+            document.getElementById('overlay').style.display = 'none'; // Hide overlay
+            document.getElementById('scroll-lock').style.overflow = 'auto';
+        }
+        // Close Button
+        document.getElementById('close-btn').addEventListener('click', function() {
+            closing();
+        });
+        // Click Overlay closing
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('overlay').addEventListener('click', function() {
+                closing();
+            });
+        });
+
+        // Quantity Change
+        document.querySelector('.increase-qty').addEventListener('click', function() {
+            let qtyInput = document.getElementById('quantity');
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+        });
+
+        document.querySelector('.decrease-qty').addEventListener('click', function() {
+            let qtyInput = document.getElementById('quantity');
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        });
+
+        // Adding exact amount to cart button
+        let cartCount = 0;
+        document.getElementById('addToCart').addEventListener('click', function() {
+            let quantityInput = document.getElementById('quantity'); // Get the input field
+            let quantity = parseInt(quantityInput.value); // Get the value from the input field
+            if (!isNaN(quantity) && quantity > 0) { // Ensure it's a valid number
+                cartCount += quantity; // Add the exact number from input
+                document.getElementById('cartCount').textContent = cartCount; // Update the View Cart button
+            }
+
+            // Reset input field to 1 after adding to cart
+            quantityInput.value = 1;
+
+            let itemName = document.getElementById('detailTitle').textContent;
+            let unitPrice = parseInt(document.getElementById('detailPrice').textContent);
+
+            let existingItem = cart.find(item => item.name === itemName);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ name: itemName, price: unitPrice, quantity: quantity });
+            }
+
+            closing();
+        });
+
+
+        let cart = []; // Array to store cart items
+        document.getElementById('cartButton').addEventListener('click', function() {
+            let cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+            
+            // Populate cart modal
+            let cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = cart.map(item => 
+                `<li class='list-group-item d-flex justify-content-between align-items-center'>
+                    ${item.name} - $${item.price} x ${item.quantity}
+                    <span class="fw-bold">$${item.price * item.quantity}</span>
+                </li>`
+            ).join('');
+            
+            // Update total price
+            document.getElementById('cartTotal').textContent = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            cartModal.show();
+        });
+
+        // Checkout functionality
+        document.getElementById('checkout').addEventListener('click', function() {
+            alert("Thank you for your purchase! \n This is just the demo. \n So, No item will not delivar to your house. \n Sorry!"); // Replace with custom popup
+            cart = []; // Clear cart
+            document.getElementById('cartCount').textContent = 0; // Reset cart count
+
+            window.location.href = 'coffee_beans.html';
+        });
+
+    </script>
+    
+   
+
+    <!-- Plugin Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nprogress/nprogress.js"></script>
+    <script>
+        // Animation on Scroll
+        AOS.init();
+
+        // Scroll Progress
+        const progressBar = document.getElementById('progress-bar');
+        // Listen for the scroll event
+        window.onscroll = function() {
+        // Calculate the scroll progress
+        const scrollTop = window.scrollY; // How much has been scrolled
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; // Total scrollable height
+        const scrollPercentage = (scrollTop / windowHeight) * 100;
+
+        // Update the width of the progress bar
+        progressBar.style.width = scrollPercentage + '%';
+        };
+
+        // Loading Progress
+        NProgress.start();
+        window.onload = function() {
+          NProgress.done();
+        };
+    </script>
+
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+    
+</body>
+</html>
