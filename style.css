@@ -329,7 +329,7 @@ h1,h2,h3,h4,h5,span,p {
 
 @media (max-width: 768px) {
     .hero-section {
-        height: 100vh;
+        height: 60vh;
     }
     .hero-content {
         margin: 0 !important;
@@ -371,6 +371,7 @@ h1,h2,h3,h4,h5,span,p {
 .card-heading-text {
     margin-top: 20px !important;
     font-size: 1rem;
+    text-align: center;
 }
 .card-body{
     display: flex;
@@ -454,7 +455,7 @@ h1,h2,h3,h4,h5,span,p {
 }
 @media (max-width: 768px) {
     .about-section {
-        height: 100vh;
+        height: 60vh;
     }
 }
 
@@ -478,7 +479,7 @@ h1,h2,h3,h4,h5,span,p {
 }
 @media (max-width: 768px) {
     .sub-section {
-        height: 100vh;
+        height: 60vh;
     }
 }
 
@@ -733,6 +734,7 @@ h1,h2,h3,h4,h5,span,p {
         margin: 10px !important;
     }
     .story-lead {
+        margin: 15px 20px !important;
         font-size: 0.8rem;
     }
 }
