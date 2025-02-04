@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+
+    <section class="blog-section">
+        <!-- Back Arrow -->
+        <div class="container mx-3">
+            <a href="javascript:history.back()" class="back-arrow">
+                <i class="fa fa-chevron-left"></i> Back
+            </a>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <!-- Main Blog Content -->
+                <div class="col-lg-9 blog-container">
+                    <img src="./Barista/pexels-vanmalidate-769275.jpg" class="img-fluid rounded blog-img" alt="Blog Image">
+                    <h2 class="mt-3">Blog Post Title</h2>
+                    <p class="text-muted">Published on February 4, 2025</p>
+                    <p>
+                        This is a simple blog page using Bootstrap. The layout is clean, readable, and responsive.
+                        You can add your own content here and make it visually appealing.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac ligula vitae mi blandit
+                        interdum. Donec efficitur, nisl nec volutpat laoreet, neque purus laoreet justo, ut pulvinar nunc
+                        sapien non turpis.
+                    </p>
+                </div>
+        
+                <!-- Suggested Posts Sidebar -->
+                <div class="col-lg-3" data-aos="fade-left">
+                    <div class="p-3 bg-light rounded suggested-posts">
+                        <h4 class="suggested-title">Suggested Posts</h4>
+                        <ul class="list-unstyled post-list">
+                            <li class="suggest-post-list mb-3">
+                                <img src="./Barista/pexels-chevanon-302896.jpg" class="suggest-img" alt="Post 1">
+                                <a href="#" class="ms-3 suggest-link">What is Coffee (2.2.2022)</a>
+                            </li>
+                            <li class="suggest-post-list mb-3">
+                                <img src="./Barista/pexels-ketut-subiyanto-4349828.jpg" class="suggest-img" alt="Post 2">
+                                <a href="#" class="ms-3 suggest-link">When is coffee (3.3.2023)</a>
+                            </li>
+                            <li class="suggest-post-list">
+                                <img src="./Barista/pour-over-intensive-workshop-class-Cropped-2-scaled.jpg" class="suggest-img" alt="Post 3">
+                                <a href="#" class="ms-3 suggest-link">Why is Coffee (1.1.2021)</a>
+                            </li>
+                            <li class="suggest-post-list">
+                                <img src="./Barista/images.jpg" class="suggest-img" alt="Post 4">
+                                <a href="#" class="ms-3 suggest-link">Where is Coffee (20.12.2020)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== Start Footer Section ========== -->
+    <footer class="footer">
+        <div class="container-fluid footer-container">
+            <!-- Desktop Layout -->
+            <div class="row d-none d-md-flex footer-row">
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Our Products</h3>
+                    <ul class="list-unstyled footer-sub" data-aos="fade-down ease-in">
+                        <li class="footer-link"><a href="coffee_beans.html">Coffee Beans</a></li>
+                        <li class="footer-link"><a href="coffee.html">Grounded Coffee</a></li>
+                        <li class="footer-link"><a href="equipment.html">Equipments</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Latest Updates</h3>
+                    <ul class="list-unstyled footer-sub" data-aos="fade-down ease-in">
+                        <li class="footer-link"><a href="event.html">Events</a></li>
+                        <li class="footer-link"><a href="event.html">Blogs</a></li>
+                        <li class="footer-link"><a href="about.html#location">Location</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item">
+                    <h3 class="footer-head">Follow Us</h3>
+                    <ul class="list-unstyled d-flex footer-link-icon" data-aos="fade-down ease-in">
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="px-3">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Mobile Layout -->
+            <div class="accordion d-md-none" id="footerAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Our Products
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion"><a href="coffee_beans.html">Coffee Beans</a></li>
+                                <li class="footer-accordion"><a href="coffee.html">Grounded Coffee</a></li>
+                                <li class="footer-accordion"><a href="equipment.html">Equipments</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Latest Updates
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion"><a href="event.html">Events</a></li>
+                                <li class="footer-accordion"><a href="event.html">Blogs</a></li>
+                                <li class="footer-accordion"><a href="about.html#location">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Follow Us
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>facebook.com/beanboutique</span>
+                                    </a>
+                                </li>
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-instagram"></i>
+                                        <span>instragram.com/beanboutique</span>
+                                    </a>
+                                </li>
+                                <li class="footer-accordion">
+                                    <a href="#" target="_blank" class="footer-accordion-link">
+                                        <i class="fa fa-telegram"></i>
+                                        <span>t.me/beanboutique</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid footer-wrap">
+            <div class="row footer-wrap-row">
+                <div class="col-md-4 footer-wrap-item">
+                    <span class="footer-wrap-text">@ 2025 Bean Boutique</span>
+                </div>
+                <div class="col-md-4 footer-wrap-item">
+                    <h4 class="footer-wrap-head">
+                        Bean Boutique
+                    </h4>
+                </div>
+                <div class="col-md-4 footer-wrap-item">
+                    <span class="footer-wrap-text">In Coffee We Trust</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== End Footer Section ========== -->
+    
+
+    <!-- ========== JavaScript Section ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/nprogress/nprogress.js"></script>
+    <script>
+        // Animation on Scroll
+        AOS.init();
+
+        // Scroll Progress
+        const progressBar = document.getElementById('progress-bar');
+        // Listen for the scroll event
+        window.onscroll = function() {
+        // Calculate the scroll progress
+        const scrollTop = window.scrollY; // How much has been scrolled
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; // Total scrollable height
+        const scrollPercentage = (scrollTop / windowHeight) * 100;
+
+        // Update the width of the progress bar
+        progressBar.style.width = scrollPercentage + '%';
+        };
+
+        // Loading Progress
+        NProgress.start();
+        window.onload = function() {
+          NProgress.done();
+        };
+    </script>
+</body>
+</html>

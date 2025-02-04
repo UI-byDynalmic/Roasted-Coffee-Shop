@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,span,p {
 .vertical-line {
     border: 1.5px solid;
     border-color: #D99B5E;
-    height: 35px;
+    height: 30px;
     width: 1px !important;
 }
 .lead {
@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,span,p {
 }
 @media (max-width: 480px) {
     .vertical-line {
-        height: 30px;
+        height: 25px;
     }
     .lead {
         font-size: 1rem !important;
@@ -1113,5 +1113,180 @@ input[type="number"] {
 @media (max-width: 480px) {
     .steps {
         font-size: 0.9rem;
+    }
+}
+/* ========================================Equipment End============================================= */
+
+/* ==========================================Event Start============================================= */
+.page-event-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0 !important;
+}
+.page-event-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 !important;
+}
+.page-event-head {
+    margin: 20px !important;
+}
+.event-card-container {
+    width: 100%;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.event-card {
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.event-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.event-card-title {
+    margin: 10px 0 !important;
+}
+.description-column {
+    padding: 0 10px;
+}
+.description-container {
+    margin-top: 5px;
+    overflow: hidden;
+    max-height: 3.2em; /* Restrict height to around 2 lines */
+    transition: max-height 0.3s ease-out, display 0.3s ease-out;
+}
+.description-container.expanded {
+    max-height: 1000%;
+    display: block !important;
+}
+.full-width {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-top: 10px;
+}
+.see-more {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+@media (max-width: 480px) {
+    .page-event-head {
+        margin: 10px !important;
+    }
+    .event-card-title {
+        font-size: 1.05rem;
+    }
+    .event-card-text, .span-date {
+        font-size: 0.8rem;
+    }
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.blog-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.blog-link {
+    margin: 10px 0;
+    text-decoration: none;
+    color: #104B53;
+    transition: color 0.3s ease-out;
+}
+.blog-link:hover {
+    color: #D99B5E;
+}
+
+
+
+
+.blog-section {
+    margin-top: 30px;
+}
+.back-arrow {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #104B53;
+}
+.back-arrow i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+.blog-container {
+    max-width: 800px;
+    margin: auto;
+}
+.blog-img {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+}
+.suggested-title {
+    padding-bottom: 5px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-bottom: 20px !important;
+    color: #D99B5E;
+    border-bottom: 2px solid #104B53;
+    text-align: center;
+}
+.suggested-posts img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.suggest-post-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+.suggest-img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.suggest-link {
+    text-decoration: none;
+    color: #104B53;
+    transition: color 0.3s ease-out;
+}
+.suggest-link:hover {
+    color: #D99B5E;
+}
+
+@media (max-width: 768px) {
+    .post-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .suggest-post-list {
+        flex: 0 0 auto;
+        padding: 15px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-list {
+        display: block;
+    }
+    .suggest-post-list {
+        width: 100%;
     }
 }
