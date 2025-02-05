@@ -12,9 +12,9 @@
 </head>
 <body>
 
-    <section class="blog-section">
+    <section class="single-blog-section">
         <!-- Back Arrow -->
-        <div class="container mx-3">
+        <div class="container-fluid">
             <a href="javascript:history.back()" class="back-arrow">
                 <i class="fa fa-chevron-left"></i> Back
             </a>
@@ -23,23 +23,25 @@
             <div class="row">
                 <!-- Main Blog Content -->
                 <div class="col-lg-9 blog-container">
-                    <img src="./Barista/pexels-vanmalidate-769275.jpg" class="img-fluid rounded blog-img" alt="Blog Image">
-                    <h2 class="mt-3">Blog Post Title</h2>
-                    <p class="text-muted">Published on February 4, 2025</p>
-                    <p>
-                        This is a simple blog page using Bootstrap. The layout is clean, readable, and responsive.
-                        You can add your own content here and make it visually appealing.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac ligula vitae mi blandit
-                        interdum. Donec efficitur, nisl nec volutpat laoreet, neque purus laoreet justo, ut pulvinar nunc
-                        sapien non turpis.
-                    </p>
+                    <img src="./Barista/pexels-vanmalidate-769275.jpg" class="rounded blog-img" alt="Blog Image">
+                    <h2 class="single-blog-title">Blog Post Title</h2>
+                    <p class="text-muted single-blog-time">Published on February 4, 2025</p>
+                    <div class="single-blog-text">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint officia maiores facere nesciunt expedita ea minus voluptatum accusamus numquam atque ex hic, beatae quis! Maiores maxime veritatis laboriosam et commodi.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio harum quae iusto explicabo, eaque nulla hic. Nemo assumenda repellendus fugit tenetur, exercitationem excepturi temporibus quas laboriosam numquam illo, maxime alias.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac ligula vitae mi blandit
+                            interdum. Donec efficitur, nisl nec volutpat laoreet, neque purus laoreet justo, ut pulvinar nunc
+                            sapien non turpis.
+                        </p>
+                    </div>
                 </div>
         
                 <!-- Suggested Posts Sidebar -->
-                <div class="col-lg-3" data-aos="fade-left">
-                    <div class="p-3 bg-light rounded suggested-posts">
+                <div class="col-lg-3">
+                    <div class="bg-light rounded suggested-posts">
                         <h4 class="suggested-title">Suggested Posts</h4>
                         <ul class="list-unstyled post-list">
                             <li class="suggest-post-list mb-3">
@@ -82,8 +84,8 @@
                 <div class="col-md-4 footer-item">
                     <h3 class="footer-head">Latest Updates</h3>
                     <ul class="list-unstyled footer-sub" data-aos="fade-down ease-in">
-                        <li class="footer-link"><a href="event.html">Events</a></li>
-                        <li class="footer-link"><a href="event.html">Blogs</a></li>
+                        <li class="footer-link"><a href="event.html#event-section">Events</a></li>
+                        <li class="footer-link"><a href="event.html#blog-section">Blogs</a></li>
                         <li class="footer-link"><a href="about.html#location">Location</a></li>
                     </ul>
                 </div>
@@ -136,8 +138,8 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
                         <div class="accordion-body">
                             <ul class="list-unstyled">
-                                <li class="footer-accordion"><a href="event.html">Events</a></li>
-                                <li class="footer-accordion"><a href="event.html">Blogs</a></li>
+                                <li class="footer-accordion"><a href="event.html#event-section">Events</a></li>
+                                <li class="footer-accordion"><a href="event.html#blog-section">Blogs</a></li>
                                 <li class="footer-accordion"><a href="about.html#location">Location</a></li>
                             </ul>
                         </div>
@@ -204,18 +206,7 @@
         // Animation on Scroll
         AOS.init();
 
-        // Scroll Progress
-        const progressBar = document.getElementById('progress-bar');
-        // Listen for the scroll event
-        window.onscroll = function() {
-        // Calculate the scroll progress
-        const scrollTop = window.scrollY; // How much has been scrolled
-        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight; // Total scrollable height
-        const scrollPercentage = (scrollTop / windowHeight) * 100;
-
-        // Update the width of the progress bar
-        progressBar.style.width = scrollPercentage + '%';
-        };
+        
 
         // Loading Progress
         NProgress.start();

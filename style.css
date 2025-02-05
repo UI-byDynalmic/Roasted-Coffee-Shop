@@ -660,6 +660,9 @@ h1,h2,h3,h4,h5,span,p {
 }
 .aboutus-left-header {
     margin: 20px 0 !important;
+    color: #104B53;
+    border-bottom: 2px solid #D99B5E;
+    width: max-content;
 }
 .video-container {
     position: relative;
@@ -754,6 +757,9 @@ h1,h2,h3,h4,h5,span,p {
 }
 .mission-right-header {
     margin: 20px 0 !important;
+    color: #104B53;
+    border-bottom: 2px solid #D99B5E;
+    width: max-content;
 }
 .video-container {
     position: relative;
@@ -1170,12 +1176,30 @@ input[type="number"] {
     flex: 0 0 100% !important;
     margin-top: 10px;
 }
+.spans {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #D99B5E;
+    width: max-content;
+    color: #181F30;
+}
+.span-location, .span-time {
+    margin-left: 20px !important;
+}
+.color-span{
+    color: #104B53;
+    font-weight: 600;
+}
 .see-more {
     cursor: pointer;
-    color: #007bff;
+    color: #104B53;
     text-decoration: none;
     display: inline-block;
     margin-top: 5px;
+    transition: color 0.3s ease-out;
+    font-weight: 500;
+}
+.see-more:hover {
+    color: #D99B5E;
 }
 @media (max-width: 480px) {
     .page-event-head {
@@ -1184,8 +1208,19 @@ input[type="number"] {
     .event-card-title {
         font-size: 1.05rem;
     }
-    .event-card-text, .span-date {
+    .event-card-text {
         font-size: 0.8rem;
+    }
+    .spans {
+        display: flex;
+        flex-direction: column;
+    }
+    .span-date, .span-location, .span-time {
+        font-size: 0.8rem;
+        margin: 3px 0 !important;
+    }
+    .span-location, .span-time {
+        margin-left: 0 !important;
     }
 }
 .blog-card {
@@ -1197,6 +1232,7 @@ input[type="number"] {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    margin: 10px 0;
 }
 .blog-link {
     margin: 10px 0;
@@ -1207,9 +1243,14 @@ input[type="number"] {
 .blog-link:hover {
     color: #D99B5E;
 }
+@media (max-width: 480px) {
+    .blog-span {
+        font-size: 0.8rem !important;
+    }
+}
+/* ==========================================Event End============================================= */
 
-
-
+/* =======================================Single Blog Start========================================== */
 
 .blog-section {
     margin-top: 30px;
@@ -1220,34 +1261,39 @@ input[type="number"] {
     text-decoration: none;
     cursor: pointer;
     color: #104B53;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 .back-arrow i {
     font-size: 20px;
     margin-right: 15px;
 }
-.blog-container {
-    max-width: 800px;
-    margin: auto;
-}
 .blog-img {
     width: 100%;
-    max-height: 700px;
+    height: 500px;
     object-fit: cover;
+}
+.single-blog-title {
+    margin: 20px 0 !important;
+}
+.single-blog-time {
+    margin: 10px 0 !important;
+}
+.single-blog-text {
+    text-align: justify;
+    margin-right: 30px;
+}
+.single-blog-text p {
+    margin: 20px 0 !important;
+}
+.suggested-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
 }
 .suggested-title {
-    padding-bottom: 5px !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
     margin-bottom: 20px !important;
     color: #D99B5E;
-    border-bottom: 2px solid #104B53;
-    text-align: center;
-}
-.suggested-posts img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
 }
 .suggest-post-list {
     display: flex;
@@ -1256,10 +1302,11 @@ input[type="number"] {
     margin: 20px 0;
 }
 .suggest-img {
-    max-width: 300px;
-    max-height: 300px;
+    width: 100%;
+    max-height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 .suggest-link {
     text-decoration: none;
@@ -1271,6 +1318,12 @@ input[type="number"] {
 }
 
 @media (max-width: 768px) {
+    .single-blog-text {
+        margin-right: 0;
+    }
+    .suggested-posts {
+        margin-top: 100px;
+    }
     .post-list {
         display: flex;
         flex-wrap: wrap;
@@ -1283,6 +1336,16 @@ input[type="number"] {
 }
 
 @media (max-width: 480px) {
+    .back-arrow {
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
+    .single-blog-title {
+        text-align: center;
+    }
+    .single-blog-time, .single-blog-text {
+        font-size: 0.8rem;
+    }
     .post-list {
         display: block;
     }
@@ -1290,3 +1353,4 @@ input[type="number"] {
         width: 100%;
     }
 }
+/* =======================================Single Blog End============================================ */
